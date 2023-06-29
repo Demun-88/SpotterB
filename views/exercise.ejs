@@ -1,0 +1,46 @@
+<%- include("partials/header.ejs") -%>
+    <div class="finder">
+        <form action="/exercises" method="post" class="finder-form">
+            <label class="finder-form-label">Exercise name</label>
+            <input class="finder-input" type="text" name="name" autocomplete="off">
+            <label class="finder-form-label">Type</label>
+            <select class="finder-input" name="type">
+                <option class="select-option" value="cardio">cardio</option>
+                <option class="select-option" value="olympic weightlifting">olympic weightlifting</option>
+                <option class="select-option" value="Plyometrics">Plyometrics</option>
+                <option class="select-option" value="Powerlifting">Powerlifting</option>
+                <option class="select-option" value="Strength">Strength</option>
+                <option class="select-option" value="Stretching">Stretching</option>
+                <option class="select-option" value="Strongman">Strongman</option>
+            </select>
+            <label class="finder-form-label">Muscle</label>
+            <select class="finder-input" name="muscle">
+                <option class="select-option" value="Abdominals">Abdominals</option>
+                <option class="select-option" value="Abductors">Abductors</option>
+                <option class="select-option" value="Biceps">Biceps</option>
+                <option class="select-option" value="Calves">Calves</option>
+                <option class="select-option" value="Chest">Chest</option>
+                <option class="select-option" value="Forearms">Forearms</option>
+                <option class="select-option" value="Glutes">Glutes</option>
+                <option class="select-option" value="Hamstrings">Hamstrings</option>
+                <option class="select-option" value="Lats">Lats</option>
+                <option class="select-option" value="Lower Back">Lower Back</option>
+                <option class="select-option" value="Middle Back">Middle Back</option>
+                <option class="select-option" value="Neck">Neck</option>
+                <option class="select-option" value="Quadriceps">Quadriceps</option>
+                <option class="select-option" value="Traps">Traps</option>
+                <option class="select-option" value="Triceps">Triceps</option>
+            </select>
+            <label class="finder-form-label">Difficulty</label>
+            <select class="finder-input" name="Difficulty">
+                <option class="select-option" value="Beginners">Beginners</option>
+                <option class="select-option" value="Intermediate">Intermediate</option>
+                <option class="select-option" value="Expert">Expert</option>
+            </select>
+            <div class="finder-form-button">
+                <button type="submit" class="form-button">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+<%- include("partials/footer.ejs") -%>

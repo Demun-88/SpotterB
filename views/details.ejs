@@ -1,0 +1,38 @@
+<%- include("partials/header") -%>
+    <div class="details">
+        <span class="details-s"><span class="details-s-h">Name:</span> <%=details.name%></span>
+        <span class="details-s"><span class="details-s-h">Type:</span> <%=details.type%></span>
+        <span class="details-s"><span class="details-s-h">Muscle:</span> <%=details.muscle%></span>
+        <span class="details-s"><span class="details-s-h">Equipment:</span> <%=details.equipment%></span>
+        <span class="details-s"><span class="details-s-h">Difficulty:</span> <%=details.difficulty%></span>
+        <% if(details.instructions.length>0) { %>
+            <span class="details-s"><span class="details-s-h">Instructions:</span> <%=details.instructions%></span>
+        <% } %>
+    </div>
+    <div class="vid">
+        
+        <% videos.forEach(function(vdeo){ %>
+            <% let vlink = "https://www.youtube.com/watch?v="+vdeo.id.videoId; %>
+            <div class="vid-tiles">
+                <div class="vid-tiles-up">
+                    <% imgsrc=vdeo.snippet.thumbnails.medium.url; %>
+                    <img class="vid-thumb" src=<%= imgsrc %> >
+                </div>
+                <div class="vid-tiles-down">
+                    <%= vdeo.snippet.channelTitle %>
+                    <hr class="vid-hr" width="260px">
+                    <%= vdeo.snippet.title %>
+                    <a href=<%= vlink %> class="vid-link">
+                        <button class="vid-link-btn">View</button>
+                    </a>
+                </div>
+            </div>
+       <% }); %>
+    </div>
+    <div class="back-btn">
+        <a href="/exercises" class="tiles-a">
+            <button class="tiles-button">Go back</button>
+        </a>
+    </div>
+    <script src="/javascript/detailscript.js" defer></script>
+<%- include("partials/footer") -%>

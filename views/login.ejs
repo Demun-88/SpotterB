@@ -1,0 +1,16 @@
+<%- include("partials/header") -%>
+
+<div class="logindiv">
+    <form class="loginform" action="/login" method="post">
+        <label class="form-label">SpotterB</label>
+        <input type="text" class="form-input" name="username" placeholder="Username" autocomplete="off">
+        <input type="text" id="password" class="form-input" name="password" Placeholder="Password min 8 characters" autocomplete="off">
+        <button id="submitbutton" type="submit" class="form-button">Login</button>
+    </form>
+    <div class="login-div">
+        Don't have an account<a href="/signup" class="login-a">Sign Up</a>
+    </div>
+</div>
+<script src="/javascript/authentication.js" defer></script>
+
+<%- include("partials/footer") -%>

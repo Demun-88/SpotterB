@@ -1,0 +1,28 @@
+<%- include("partials/header") -%>
+    <div class="result">
+    <% if(curr_exercises.length===0) { %>   
+        No Result Found
+    <% } %>
+    <% curr_exercises.forEach(function(current) { %>
+        <% let route = "/details/"+current.name.replaceAll("/","+").toLowerCase(); %>
+        <% route = route.replaceAll("-","+"); %>
+        <% route = route.replaceAll(" ","+"); %>
+        <div class="tiles">
+            <div class="tiles-up">
+                <%= current.name %>
+            </div>
+            <div class="tiles-down">
+                <a href=<%= route %> class="tiles-a">
+                    <button class="tiles-button" name="btnval" value=<%= current.name %>>View</button>
+                </a>
+            </div>
+        </div>
+  <%  }); %>
+    </div>
+    <div class="back-btn">
+        <a href="/exercises" class="tiles-a">
+            <button class="tiles-button">Go back</button>
+        </a>
+    </div>
+    <script src="/javascript/result.js" defer></script>
+<%- include("partials/footer") -%>

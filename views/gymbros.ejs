@@ -1,0 +1,36 @@
+<%- include("partials/header") -%>
+<div class="gymb">
+    <!-- <div class="user">
+        <%= curr_user %>
+        <a href="/create">
+            <button class="user-button" type="button">Create</button>
+        </a>
+        <a href="/logout">
+            <button class="user-button" type="button">Logout</button>
+        </a>
+    </div> -->
+    <% let i=1; %>
+    <% if(postdata.length<=0) { %>
+        No post yet.
+    <% } %>
+    <% postdata.forEach(function(data) { %>
+        <div class="posts-div">
+            <div class="uname">
+                <%= data.uname %>
+            </div>
+            <div class="post">
+                <% let cont= data.content %>
+                <%= cont %>
+                
+            </div>
+            
+            <% if(data.content.length > 500) {%>
+                <button class="post-b">Read more</button>
+            <% } %>
+        </div>
+    <% i++; %>
+    <% }); %>
+    <script src="/javascript/posts.js" defer></script>
+</div>
+
+<%- include("partials/footer") -%>

@@ -1,0 +1,40 @@
+<%- include("partials/header") -%>
+
+
+<div class="gymb">
+    <div class="acc">
+        <div class="acc-details">
+            <div class="acc-uname"><%= curr_user %></div>
+            <a href="/create" class="tiles-a">
+                <button class="tiles-button" >Create</button>
+            </a>
+            <a href="/logout" class="tiles-a">
+                <button class="tiles-button" >Logout</button>
+            </a>
+        </div>
+    </div>
+    <% postdata.forEach(function(data) { %>
+        <div class="posts-div">
+            <div class="uname">
+                <%= data.uname %>
+            </div>
+            <div class="post">
+                <% let cont= data.content %>
+                <%= cont %>
+                
+            </div>
+            <% if(data.content.length > 500) {%>
+                <button class="post-b acc-r">Read more</button>
+            <% } %>
+            
+                <form class="acc-form" method="post" action="/delete">
+                    <input type="hidden" name="dltid" value=<%= data.id %> >
+                    <button type="submit" class="post-d">Delete</button>
+                </form>
+            
+        </div>
+    <% }); %>
+    <script src="/javascript/posts.js" defer></script>
+</div>
+
+<%- include("partials/footer") -%>
