@@ -220,6 +220,6 @@ app.post("/create",async function(req,res){
     post.save();
     res.redirect("/gymbros");
 })
-app.listen(process.env.PORT || 3000,() => {console.log("Server is running");});
+app.listen(process.env.PORT || 8081,() => {console.log("Server is running");});
 
 
