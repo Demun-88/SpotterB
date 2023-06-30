@@ -680,6 +680,7 @@ body{
     }
 }
 @media screen and (max-width:400px){
+    
     .intro{
         background-size: cover;
         overflow-x:hidden;
@@ -690,6 +691,9 @@ body{
     }
     .drawer-transition{
         width:160px;
+    }
+    .slide-3{
+        overflow-x:hidden;
     }
 }
 
