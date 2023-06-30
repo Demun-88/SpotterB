@@ -661,6 +661,9 @@ body{
             font-size:15px;
         }
     }
+    .slide-3-roller{
+        display:none;
+    }
     .slide-3-s{
         font-size:5vw;
     }
