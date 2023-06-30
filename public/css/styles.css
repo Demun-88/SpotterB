@@ -400,7 +400,8 @@ body{
     align-items:center;
     justify-content: center;
     
-    .slide-3-balls{
+}
+.slide-3-balls{
         height: 2vh;
         aspect-ratio: 1/1;
         position:absolute;
@@ -471,8 +472,6 @@ body{
         top:90vh;
         left:0;
     }
-    
-}
 .slide-3-s{
     width:40vw;
     aspect-ratio: 1/1;
@@ -605,7 +604,7 @@ body{
 }
 @keyframes footer-a{
     100%{
-    border-radius: 30% 30% 0 0;
+    border-radius: 30% 30% 0px 0px;
     }
 }
 
@@ -643,7 +642,7 @@ body{
     .slide-2-left{
         position:absolute;
         height:300px;
-        margin:0;
+        margin:0px;
         left:15vw;
         aspect-ratio: 1/1;
     }
@@ -664,6 +663,9 @@ body{
     .slide-3-roller{
         display:none;
     }
+    .slide-3-balls{
+        display:none;
+    }
     .slide-3-s{
         font-size:5vw;
     }
@@ -673,7 +675,7 @@ body{
     .slide-4-right{
         min-height:100vh;
         width:80vw;
-        padding:20px 0;
+        padding:20px 0px;
     }
     .slide-4-text{
         font-size:20px;
