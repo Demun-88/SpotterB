@@ -680,6 +680,11 @@ body{
     .slide-4-text{
         font-size:20px;
     }
+    .drawer{
+        left:0px;
+        border-radius:0px;
+    }
+    
 }
 @media screen and (max-width:400px){
     body{
