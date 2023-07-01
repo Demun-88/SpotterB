@@ -716,6 +716,7 @@ body{
     }
     .intro{
         background-position:center;
+        background-attachment: scroll;
     }
     .drawer-transition{
         width:160px;
