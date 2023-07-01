@@ -661,6 +661,7 @@ body{
     }
     .slide-2{
         min-height:900px;
+        max-height:1000px;
         position:relative;
         display: flex;
         flex-flow:column;
@@ -711,6 +712,9 @@ body{
 @media screen and (max-width:368px) {
     body{
         max-width:100vw;
+    }
+    .intro{
+        background-position:center;
     }
     .drawer-transition{
         width:160px;
