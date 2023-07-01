@@ -118,9 +118,9 @@ app.get("/details/:dest",async function(req,res){
     if(current_exercise.length>0){
         current_exercise.forEach(function(curr){
         x= curr.name;
-        x=x.replaceAll(" ","+").toLowerCase();
-        x=x.replaceAll("-","+");
-        x=x.replaceAll("/","+");
+        x=x.replace(/[ ]/g,"+").toLowerCase();
+        x=x.replace(/[-]/g,"+");
+        x=x.replace(/[/]/g,"+");
         if(x==req.params.dest){
             details=curr;
         }
