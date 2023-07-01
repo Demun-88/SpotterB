@@ -4,9 +4,9 @@
         No Result Found
     <% } %>
     <% curr_exercises.forEach(function(current) { %>
-        <% let route = "/details/"+current.name.replaceAll("/","+").toLowerCase(); %>
-        <% route = route.replaceAll("-","+"); %>
-        <% route = route.replaceAll(" ","+"); %>
+        <% let route = "/details/"+current.name.replace(/[/]/g,"+").toLowerCase(); %>
+        <% route = route.replace(/[-]/g,"+"); %>
+        <% route = route.replace(/[ ]/g,"+"); %>
         <div class="tiles">
             <div class="tiles-up">
                 <%= current.name %>
